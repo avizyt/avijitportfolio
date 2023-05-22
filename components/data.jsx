@@ -4,7 +4,7 @@ export const projects = [
         subtitle: "MERN Stack",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-        image: "./project-1.gif",
+        image: "/public/assets/images/project-image.jpg",
         link: "https://reactbootcamp.com",
     },
     {
@@ -12,7 +12,7 @@ export const projects = [
         subtitle: "React and Python",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-        image: "./project-2.gif",
+        image: "/public/assets/images/project-image.jpg",
         link: "https://reedbarger.com",
     },
     {
@@ -20,7 +20,7 @@ export const projects = [
         subtitle: "React and Firebase",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-        image: "./project-3.gif",
+        image: "/public/assets/images/project-image.jpg",
         link: "https://jsbootcamp.com",
     },
     {
@@ -28,7 +28,36 @@ export const projects = [
         subtitle: "React Hooks",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-        image: "./project-4.gif",
+        image: "/public/assets/images/project-image.jpg",
         link: "https://pythonbootcamp.com",
     },
+];
+
+export const skills = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "Node.js",
+    "Python",
+    "Java",
+    "SQL",
+    "Git",
+    "UI/UX Design",
+];
+
+export const testimonials = [
+    {
+        quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pretium neque non erat commodo, in auctor quam euismod.",
+        image: "https://example.com/testimonial1.jpg",
+        name: "John Doe",
+        company: "ABC Company",
+    },
+    {
+        quote: "Praesent consectetur sagittis massa, ut venenatis nulla ultrices ut. Mauris interdum velit id nunc luctus, a elementum nunc egestas.",
+        image: "https://example.com/testimonial2.jpg",
+        name: "Jane Smith",
+        company: "XYZ Corporation",
+    },
+    // Add more testimonials here
 ];
