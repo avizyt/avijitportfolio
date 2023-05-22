@@ -1,14 +1,22 @@
+import About from "@/components/About";
+import "@/styles/globals.css";
 import RootLayout from "./layout";
 import Link from "next/link";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import Testimonial from "@/components/Testimonial";
+import Contact from "@/components/Contact";
 
-const page = () => {
+const Home = () => {
     return (
-        <div>
-            <RootLayout />
-            <Link href='/blog'>Blog</Link>
-            <h1>Hi, I'm Avijit</h1>
+        <div className='flex_start'>
+            <About />
+            <Projects />
+            <Skills />
+            <Testimonial />
+            <Contact />
         </div>
     );
 };
 
-export default page;
+export default Home;
