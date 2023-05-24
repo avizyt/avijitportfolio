@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const About = () => {
     return (
-        <section className='py-16 bg-white'>
-            <div className='container mx-auto flex flex-wrap items-center'>
+        <section className='py-20 bg-white'>
+            <div className='glassmorphism mt-20 flex flex-wrap items-center'>
                 <div className='lg:w-1/2 w-full lg:pr-10'>
                     <h1 className='text-4xl font-bold mb-4'>
                         Hi, I'm Avijit
