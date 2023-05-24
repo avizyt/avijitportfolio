@@ -1,31 +1,61 @@
-import { ArrowDownRightIcon } from "@heroicons/react/24/solid";
+"use client";
+import { useEffect, useState } from "react";
+import Link from "next/link";
+
+import { FaArrowDown } from "react-icons/fa";
 
 const Navbar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
     return (
-        <header className='bg-gray-800 md:sticky top-0 z-10'>
+        <header
+            className={`fixed top-0 z-10 w-full bg-transparent backdrop-filter backdrop-blur-lg ${
+                isScrolled ? "bg-gray-800 bg-opacity-80" : ""
+            }`}>
             <div className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
-                <a className='title-font font-medium text-white mb-4 md:mb-0'>
-                    <a href='#about' className='ml-3 text-xl'>
-                        Reed Barger
-                    </a>
-                </a>
-                <nav className='md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center'>
-                    <a href='#projects' className='mr-5 hover:text-white'>
-                        Past Work
-                    </a>
-                    <a href='#skills' className='mr-5 hover:text-white'>
-                        Skills
-                    </a>
-                    <a href='#testimonials' className='mr-5 hover:text-white'>
-                        Testimonials
-                    </a>
+                <Link href='#about'>
+                    <h3 className='title-font font-medium text-black mb-4 md:mb-0 ml-3 text-xl'>
+                        Avijit Biswas
+                    </h3>
+                </Link>
+                <nav className='md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700 flex flex-wrap items-center text-base justify-center'>
+                    <Link href='#projects'>
+                        <h3 className='glassmorphism mr-2 hover:text-slate-400'>
+                            Past Work
+                        </h3>
+                    </Link>
+                    <Link href='#skills'>
+                        <h3 className='glassmorphism mr-5 hover:text-slate-400'>
+                            Skills
+                        </h3>
+                    </Link>
+                    <Link href='#testimonials'>
+                        <h3 className=' glassmorphism mr-5 hover:text-slate-400'>
+                            Testimonials
+                        </h3>
+                    </Link>
                 </nav>
-                <a
-                    href='#contact'
-                    className='inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0'>
-                    Hire Me
-                    <ArrowDownRightIcon className='w-4 h-4 ml-1' />
-                </a>
+                <Link href='#contact'>
+                    <h3 className='glassmorphism inline-flex items-center bg-gray-800 border-0 py-1 px-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0'>
+                        Hire Me
+                        <FaArrowDown className='w-4 h-4 ml-1' />
+                    </h3>
+                </Link>
             </div>
         </header>
     );

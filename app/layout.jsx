@@ -14,9 +14,8 @@ const RootLayout = ({ children }) => {
                     <div className='gradient'></div>
                 </div>
                 <main className='app'>
-                    <nav className='orange_gradient'>
-                        <Navbar />
-                    </nav>
+                    <Navbar />
+
                     {children}
                 </main>
             </body>

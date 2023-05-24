@@ -10,20 +10,17 @@ const Contact = () => {
                         height='100%'
                         title='map'
                         className='absolute inset-0'
-                        frameBorder={0}
-                        marginHeight={0}
-                        marginWidth={0}
                         style={{ filter: "opacity(0.7)" }}
-                        src='https://www.google.com/maps/embed/v1/place?q=97+warren+st+new+york+city&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8'
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d117925.2168966261!2d88.26495030551429!3d22.535564937363638!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1684948356648!5m2!1sen!2sin"
                     />
-                    <div className='bg-gray-900 relative flex flex-wrap py-6 rounded shadow-md'>
+                    <div className='glassmorphism relative flex flex-wrap py-6 rounded shadow-md'>
                         <div className='lg:w-1/2 px-6'>
                             <h2 className='title-font font-semibold text-white tracking-widest text-xs'>
                                 ADDRESS
                             </h2>
                             <p className='mt-1'>
-                                97 Warren St. <br />
-                                New York, NY 10007
+                                Kolkata <br />
+                                West Bengal
                             </p>
                         </div>
                         <div className='lg:w-1/2 px-6 mt-4 lg:mt-0'>
@@ -31,7 +28,7 @@ const Contact = () => {
                                 EMAIL
                             </h2>
                             <a className='text-indigo-400 leading-relaxed'>
-                                reedbarger@email.com
+                                biswas.avijit23@email.com
                             </a>
                             <h2 className='title-font font-semibold text-white tracking-widest text-xs mt-4'>
                                 PHONE
@@ -43,8 +40,8 @@ const Contact = () => {
                 <form
                     netlify
                     name='contact'
-                    className='lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0'>
-                    <h2 className='text-white sm:text-4xl text-3xl mb-1 font-medium title-font'>
+                    className='glassmorphism lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0'>
+                    <h2 className='text-slate-700 sm:text-4xl text-3xl mb-1 font-medium title-font'>
                         Hire Me
                     </h2>
                     <p className='leading-relaxed mb-5'>
@@ -55,7 +52,7 @@ const Contact = () => {
                     <div className='relative mb-4'>
                         <label
                             htmlFor='name'
-                            className='leading-7 text-sm text-gray-400'>
+                            className='leading-7 text-sm text-slate-600'>
                             Name
                         </label>
                         <input
@@ -92,7 +89,7 @@ const Contact = () => {
                     </div>
                     <button
                         type='submit'
-                        className='text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg'>
+                        className='glassmorphism text-indigo-600 bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-slate-300 rounded text-lg'>
                         Submit
                     </button>
                 </form>
